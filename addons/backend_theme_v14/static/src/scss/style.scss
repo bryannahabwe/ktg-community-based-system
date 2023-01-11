@@ -3,8 +3,8 @@
 
 
 @font-face {
-    font-family: Roboto;
-    src: url(/backend_theme_v14/static/src/font/Roboto-Regular.ttf)
+    font-family: "DM Sans";
+    src: url(/backend_theme_v14/static/src/font/DMSans-Regular.ttf)
 }
 
 
@@ -20,7 +20,7 @@ $brand-secondary-dark: darken($brand-secondary, 10%);
 
 body {
 
-    font-family: "Roboto";
+    font-family: "DM Sans";
 }
 
 .o_loading {
@@ -399,7 +399,7 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
 
 .o_menu_apps .full {
     width: 46px;
-    font-size: 18px;
+    font-size: 24px;
     text-align: center;
     position: relative;
     z-index: 200;

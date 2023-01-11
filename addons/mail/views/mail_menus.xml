@@ -7,5 +7,5 @@
     <menuitem name="Discuss"
         id="mail_menu_technical"
         parent="base.menu_custom"
-        sequence="1"/>
+        sequence="3"/>
 </data></odoo>

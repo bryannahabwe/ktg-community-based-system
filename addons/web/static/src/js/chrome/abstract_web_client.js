@@ -101,7 +101,7 @@ var AbstractWebClient = Widget.extend(KeyboardNavigationMixin, {
         this._current_state = null;
         this.menu_dp = new concurrency.DropPrevious();
         this.action_mutex = new concurrency.Mutex();
-        this.set('title_part', {"zopenerp": "Odoo"});
+        this.set('title_part', {"zopenerp": "KTG"});
         this.env = env;
         this.env.bus.on('set_title_part', this, this._onSetTitlePart);
     },
