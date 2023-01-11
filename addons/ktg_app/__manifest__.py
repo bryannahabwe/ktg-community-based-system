@@ -13,6 +13,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'data/generating_ktg_member_number.xml',
         'views/member_view.xml',
         'views/financial_year_view.xml',
         'menu/ktg_menu.xml',

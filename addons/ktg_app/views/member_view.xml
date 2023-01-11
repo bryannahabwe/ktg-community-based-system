@@ -7,8 +7,9 @@
             <field name="arch" type="xml">
                 <tree string="Members">
                     <field name="name"/>
-                    <field name="phone_number"/>
                     <field name="ktg_number"/>
+                    <field name="phone_number"/>
+                    <field name="date_created"/>
                 </tree>
             </field>
         </record>
@@ -22,8 +23,9 @@
                     <sheet>
                         <group colspan="4" col="4" name="main">
                             <field name="name"/>
-                            <field name="phone_number"/>
                             <field name="ktg_number"/>
+                            <field name="phone_number"/>
+                            <field name="date_created"/>
                         </group>
                     </sheet>
                 </form>
@@ -37,6 +39,7 @@
             <field name="arch" type="xml">
                 <search string="Member">
                     <field name="name"/>
+                    <field name="ktg_number"/>
                     <newline/>
                 </search>
             </field>

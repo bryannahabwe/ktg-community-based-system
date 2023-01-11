@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ktg_member_number_generator" model="ir.sequence">
+            <field name="name">KTG Member Number Generator</field>
+            <field name="code">ktg.member.number</field>
+            <field name="prefix">KTG </field>
+            <field name="padding">0</field>
+        </record>
+    </data>
+</odoo>
