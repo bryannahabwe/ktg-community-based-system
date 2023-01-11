@@ -46,7 +46,7 @@
         <menuitem id="menu_ktg_drives_set_up"
                   name="Drives Set Up"
                   parent="menu_ktg_configuration"
-                  action="act_open_ktg_member_view"
+                  action="act_open_ktg_drive_setup_view"
                   sequence="2"/>
     </data>
 </odoo>

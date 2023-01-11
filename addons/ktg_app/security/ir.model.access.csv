@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_ktg_app,ktg_app.ktg_member,model_ktg_member,base.group_user,1,1,1,1
 access_ktg_financial_year,ktg_app.ktg_financial_year,model_ktg_financial_year,base.group_user,1,1,1,1
+access_ktg_drive_setup,ktg_app.ktg_drive_setup,model_ktg_drive_setup,base.group_user,1,1,1,1

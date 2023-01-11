@@ -16,6 +16,7 @@
         'data/generating_ktg_member_number.xml',
         'views/member_view.xml',
         'views/financial_year_view.xml',
+        'views/drive_setup_view.xml',
         'menu/ktg_menu.xml',
     ],
     # only loaded in demonstration mode
