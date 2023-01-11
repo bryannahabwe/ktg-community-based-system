@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ktg_financial_year_tree_view" model="ir.ui.view">
+            <field name="name">ktg.financial_year.tree</field>
+            <field name="model">ktg.financial_year</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Financial Years">
+                    <field name="year"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ktg_financial_year_form_view" model="ir.ui.view">
+            <field name="name">ktg.financial_year.form</field>
+            <field name="model">ktg.financial_year</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Financial Year">
+                    <sheet>
+                        <group colspan="4" col="4" name="main">
+                            <field name="year"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ktg_financial_year_search_view" model="ir.ui.view">
+            <field name="name">ktg.financial_year.search</field>
+            <field name="model">ktg.financial_year</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Financial YearFinancial Year">
+                    <field name="year"/>
+                    <newline/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_ktg_financial_year_view">
+            <field name="name">Financial Year</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ktg.financial_year</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="ktg_financial_year_search_view"/>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create a new Financial Year</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_ktg_financial_year_view_form">
+            <field name="act_window_id" ref="act_open_ktg_financial_year_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="ktg_financial_year_form_view"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_ktg_financial_year_view_tree">
+            <field name="act_window_id" ref="act_open_ktg_financial_year_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="ktg_financial_year_tree_view"/>
+        </record>
+    </data>
+</odoo>

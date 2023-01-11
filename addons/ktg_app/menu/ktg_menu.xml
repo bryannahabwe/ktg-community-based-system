@@ -39,7 +39,7 @@
         <menuitem id="menu_ktg_financial_year"
                   name="Financial Year"
                   parent="menu_ktg_configuration"
-                  action="act_open_ktg_member_view"
+                  action="act_open_ktg_financial_year_view"
                   sequence="1"/>
 
         <!-- KTG Drives Set Up Menu -->

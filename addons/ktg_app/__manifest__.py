@@ -14,6 +14,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/member_view.xml',
+        'views/financial_year_view.xml',
         'menu/ktg_menu.xml',
     ],
     # only loaded in demonstration mode
