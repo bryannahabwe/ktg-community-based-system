@@ -20,6 +20,9 @@
         'views/drive_setup_view.xml',
         'views/drive_participation_view.xml',
         'views/annual_subscription.xml',
+        'report/report_menu.xml',
+        'report/member_report.xml',
+        'wizard/ktg_member_report_wizard.xml',
         'menu/ktg_menu.xml',
     ],
     # only loaded in demonstration mode

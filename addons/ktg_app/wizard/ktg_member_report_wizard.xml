@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+    <record model="ir.ui.view" id="ktg_member_report_wizard_form">
+        <field name="name">ktg.member.report.wizard.form</field>
+        <field name="model">ktg.member.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="KTG Member Report">
+                <group>
+                    <field name="member_id"
+                           options="{'no_open':True,'no_create':True,'no_create_edit':True}"/>
+                </group>
+                <footer groups="base.group_user">
+                    <button name="print_report" type="object" string="Print" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="ktg_member_report_wizard_act">
+        <field name="name">KTG Member Report</field>
+        <field name="res_model">ktg.member.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="ktg_member_report_wizard_form"/>
+        <field name="context">{}</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

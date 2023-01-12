@@ -7,14 +7,14 @@
                   sequence="1"
                   web_icon="ktg_app,static/description/icon.png"/>
 
-         <!-- KTG Members Menu -->
+        <!-- KTG Members Menu -->
         <menuitem id="menu_ktg_members"
                   name="Members"
                   parent="menu_ktg_root"
                   action="act_open_ktg_member_view"
                   sequence="1"/>
 
-         <!-- KTG Drives Participation Menu -->
+        <!-- KTG Drives Participation Menu -->
         <menuitem id="menu_ktg_drives"
                   name="Drives Participation"
                   parent="menu_ktg_root"
@@ -48,5 +48,24 @@
                   parent="menu_ktg_configuration"
                   action="act_open_ktg_drive_setup_view"
                   sequence="2"/>
+
+        <!-- KTG Reports Menu -->
+<!--        <menuitem id="menu_ktg_reports"-->
+<!--                  name="Reports"-->
+<!--                  parent="menu_ktg_root"-->
+<!--                  action="act_open_ktg_member_view"-->
+<!--                  sequence="5"/>-->
+
+<!--        <menuitem id="menu_ktg_dashboard_report"-->
+<!--                  name="KTG Dashboard"-->
+<!--                  parent="menu_ktg_reports"-->
+<!--                  sequence="1"-->
+<!--                  action="ktg_member_report_wizard_act" />-->
+
+<!--        <menuitem id="menu_ktg_member_report"-->
+<!--                  name="KTG Member Report"-->
+<!--                  parent="menu_ktg_reports"-->
+<!--                  sequence="2"-->
+<!--                  action="ktg_member_report_wizard_act" />-->
     </data>
 </odoo>

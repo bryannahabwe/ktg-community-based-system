@@ -4,3 +4,5 @@ access_ktg_financial_year,ktg_app.ktg_financial_year,model_ktg_financial_year,ba
 access_ktg_drive_setup,ktg_app.ktg_drive_setup,model_ktg_drive_setup,base.group_user,1,1,1,1
 access_ktg_drive_participation,ktg_app.ktg_drive_participation,model_ktg_drive_participation,base.group_user,1,1,1,1
 access_ktg_annual_subscription,ktg_app.ktg_annual_subscription,model_ktg_annual_subscription,base.group_user,1,1,1,1
+access_ktg_ktg_member_report_wizard,ktg_app.ktg_ktg_member_report_wizard,model_ktg_member_report_wizard,base.group_user,1,1,1,1
+access_ktg_member_report,ktg_app.ktg_member_report,model_ktg_member_report,base.group_user,1,1,1,1
