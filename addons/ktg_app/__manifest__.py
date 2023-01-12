@@ -12,6 +12,7 @@
     'license': "LGPL-3",
     # always loaded
     'data': [
+        'security/ktg_security.xml',
         'security/ir.model.access.csv',
         'data/generating_ktg_member_number.xml',
         'views/member_view.xml',

@@ -9,7 +9,7 @@
                     <field name="name"/>
                     <field name="ktg_number"/>
                     <field name="phone_number"/>
-                    <field name="date_created"/>
+                    <field name="date_created" invisible="1"/>
                 </tree>
             </field>
         </record>
@@ -25,7 +25,7 @@
                             <field name="name"/>
                             <field name="ktg_number"/>
                             <field name="phone_number"/>
-                            <field name="date_created"/>
+                            <field name="date_created" invisible="1"/>
                         </group>
                         <notebook colspan="4">
                             <page name="participated_in" string="Drives Participated In">
