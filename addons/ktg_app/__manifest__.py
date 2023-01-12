@@ -17,6 +17,7 @@
         'views/member_view.xml',
         'views/financial_year_view.xml',
         'views/drive_setup_view.xml',
+        'views/drive_participation_view.xml',
         'menu/ktg_menu.xml',
     ],
     # only loaded in demonstration mode

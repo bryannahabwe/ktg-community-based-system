@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ktg_drive_participation_tree_view" model="ir.ui.view">
+            <field name="name">ktg.drive_participation.tree</field>
+            <field name="model">ktg.drive_participation</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Drive Participants">
+                    <field name="beneficiary"/>
+                    <field name="ktg_number"/>
+                    <field name="drive"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="amount"/>
+                    <field name="date_created"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ktg_drive_participation_form_view" model="ir.ui.view">
+            <field name="name">ktg.drive_participation.form</field>
+            <field name="model">ktg.drive_participation</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Drive Participant">
+                    <sheet>
+                        <group colspan="4" col="4" name="main">
+                            <field name="beneficiary" options="{'no_create':True,'no_create_edit':True}"/>
+                            <field name="ktg_number" force_save="1"/>
+                            <field name="drive" options="{'no_create':True,'no_create_edit':True}"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="amount" widget="monetary"/>
+                            <field name="date_created"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ktg_drive_participation_search_view" model="ir.ui.view">
+            <field name="name">ktg.drive_participation.search</field>
+            <field name="model">ktg.drive_participation</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Drive Participants">
+                    <field name="beneficiary"/>
+                    <field name="ktg_number"/>
+                    <field name="drive"/>
+                    <newline/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_ktg_drive_participation_view">
+            <field name="name">Drive Participant</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ktg.drive_participation</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="ktg_drive_participation_search_view"/>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create a new Drive Participant</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_ktg_drive_participation_view_form">
+            <field name="act_window_id" ref="act_open_ktg_drive_participation_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="ktg_drive_participation_form_view"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_ktg_drive_participation_view_tree">
+            <field name="act_window_id" ref="act_open_ktg_drive_participation_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="ktg_drive_participation_tree_view"/>
+        </record>
+    </data>
+</odoo>

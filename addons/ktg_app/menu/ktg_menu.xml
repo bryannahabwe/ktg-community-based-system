@@ -18,7 +18,7 @@
         <menuitem id="menu_ktg_drives"
                   name="Drives Participation"
                   parent="menu_ktg_root"
-                  action="act_open_ktg_member_view"
+                  action="act_open_ktg_drive_participation_view"
                   sequence="2"/>
 
         <!-- KTG Annual Subscription Menu -->
