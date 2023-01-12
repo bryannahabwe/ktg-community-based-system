@@ -11,7 +11,7 @@
                     <field name="ktg_number"/>
                     <field name="drive"/>
                     <field name="currency_id" invisible="1"/>
-                    <field name="amount"/>
+                    <field name="amount" sum="Total Amount Collected"/>
                     <field name="date_created"/>
                 </tree>
             </field>
@@ -47,6 +47,12 @@
                     <field name="ktg_number"/>
                     <field name="drive"/>
                     <newline/>
+                     <group expand="0" string="Group By...">
+                        <filter string="KTG Number" domain="[]" name="group_by_ktg_number"
+                                context="{'group_by':'ktg_number'}"/>
+                        <filter string="Drive" domain="[]" name="group_by_drive"
+                                context="{'group_by':'drive'}"/>
+                    </group>
                 </search>
             </field>
         </record>

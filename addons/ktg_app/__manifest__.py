@@ -18,6 +18,7 @@
         'views/financial_year_view.xml',
         'views/drive_setup_view.xml',
         'views/drive_participation_view.xml',
+        'views/annual_subscription.xml',
         'menu/ktg_menu.xml',
     ],
     # only loaded in demonstration mode

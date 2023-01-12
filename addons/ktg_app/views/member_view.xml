@@ -27,6 +27,17 @@
                             <field name="phone_number"/>
                             <field name="date_created"/>
                         </group>
+                        <notebook colspan="4">
+                            <page name="participated_in" string="Drives Participated In">
+                                <field name="drive_participated_in" nolabel="1" readonly="1"/>
+                            </page>
+                            <page name="annual_subscription" string="Annual Subscription">
+                                <field name="annual_subscriptions" nolabel="1" readonly="1"/>
+                            </page>
+                             <page name="supported" string="Drives Supported">
+                                <field name="drives_supported" nolabel="1" readonly="1"/>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>

@@ -13,6 +13,7 @@
                     <field name="financial_year"/>
                     <field name="start_time"/>
                     <field name="end_time"/>
+                    <field name="drive_participants" widget="many2many_tags"/>
                 </tree>
             </field>
         </record>
@@ -32,6 +33,11 @@
                             <field name="start_time"/>
                             <field name="end_time"/>
                         </group>
+                         <notebook colspan="4">
+                            <page name="participants" string="Drive Participants">
+                                <field name="drive_participants" nolabel="1" readonly="1"/>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>

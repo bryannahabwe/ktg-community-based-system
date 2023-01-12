@@ -10,6 +10,9 @@ class KtgMember(models.Model):
     phone_number = fields.Char('Telephone Number')
     ktg_number = fields.Char('KTG Number', help="KTG Member Number", readonly="1", index=True)
     date_created = fields.Datetime('Date Created', readonly=True, default=fields.Datetime.now)
+    drive_participated_in = fields.One2many('ktg.drive_participation', 'beneficiary', string='Drives Participated In')
+    annual_subscriptions = fields.One2many('ktg.annual_subscription', 'beneficiary', string='Annual Subscription')
+    drives_supported = fields.One2many('ktg.drive_setup', 'beneficiary', string='Drive Supported In')
 
     @api.model
     def create(self, vals):

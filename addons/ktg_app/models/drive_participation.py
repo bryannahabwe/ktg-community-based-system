@@ -1,14 +1,14 @@
 from odoo import models, fields, api
 
 
-class KtgParticipation(models.Model):
+class KtgDriveParticipation(models.Model):
     _name = "ktg.drive_participation"
     _description = "Drive Participation"
     _rec_name = "beneficiary"
 
     beneficiary = fields.Many2one('ktg.member', 'Member', required=True, )
     ktg_number = fields.Char('KTG Number', help="KTG Member Number", readonly="1")
-    amount = fields.Monetary('Amount Contributed', required=True,)
+    amount = fields.Monetary('Amount Contributed', required=True, )
     drive = fields.Many2one('ktg.drive_setup', 'Drive', required=True)
     date_created = fields.Datetime('Date Created', readonly=True, default=fields.Datetime.now)
     currency_id = fields.Many2one('res.currency', string='Currency',

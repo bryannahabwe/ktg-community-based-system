@@ -1,18 +1,18 @@
 from odoo import models, fields, api
 
 
-class KtgDriveSetup(models.Model):
-    _name = "ktg.drive_setup"
-    _description = "Drive Set Up"
+class KtgAnnualSubscription(models.Model):
+    _name = "ktg.annual_subscription"
+    _description = "Annual Subscription"
+    _rec_name = "beneficiary"
 
-    name = fields.Char('Drive Name', required=True)
     beneficiary = fields.Many2one('ktg.member', 'Member', required=True, )
     ktg_number = fields.Char('KTG Number', help="KTG Member Number", readonly="1")
+    subscription = fields.Monetary('Subscription', required=True, readonly=True, default=20000)
     financial_year = fields.Many2one('ktg.financial_year', 'Financial Year', required=True)
-    start_time = fields.Datetime('Start', required=True, default=fields.Datetime.now)
-    end_time = fields.Datetime('End', required=True, default=fields.Datetime.now)
     date_created = fields.Datetime('Date Created', readonly=True, default=fields.Datetime.now)
-    drive_participants = fields.One2many('ktg.drive_participation', 'drive', string='Drive Participants')
+    currency_id = fields.Many2one('res.currency', string='Currency',
+                                  default=lambda self: self.env.user.company_id.currency_id)
 
     @api.onchange('beneficiary')
     def onchange_beneficiary(self):

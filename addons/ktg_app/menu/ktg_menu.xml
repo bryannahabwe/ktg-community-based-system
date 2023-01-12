@@ -25,7 +25,7 @@
         <menuitem id="menu_ktg_subscription"
                   name="Annual Subscription"
                   parent="menu_ktg_root"
-                  action="act_open_ktg_member_view"
+                  action="act_open_ktg_annual_subscription_view"
                   sequence="3"/>
 
         <!-- KTG Configuration Menu -->
