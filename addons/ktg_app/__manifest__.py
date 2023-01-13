@@ -25,10 +25,6 @@
         'wizard/ktg_member_report_wizard.xml',
         'menu/ktg_menu.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
     'installable': True,
     'application': True,
 }

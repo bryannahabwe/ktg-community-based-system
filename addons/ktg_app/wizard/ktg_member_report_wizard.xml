@@ -6,10 +6,10 @@
         <field name="arch" type="xml">
             <form string="KTG Member Report">
                 <group>
-                    <field name="member_id"
+                    <field name="member"
                            options="{'no_open':True,'no_create':True,'no_create_edit':True}"/>
                 </group>
-                <footer groups="base.group_user">
+                <footer>
                     <button name="print_report" type="object" string="Print" class="oe_highlight"/>
                     <button string="Cancel" special="cancel"/>
                 </footer>
@@ -20,6 +20,7 @@
     <record model="ir.actions.act_window" id="ktg_member_report_wizard_act">
         <field name="name">KTG Member Report</field>
         <field name="res_model">ktg.member.report.wizard</field>
+        <field name="type">ir.actions.act_window</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="ktg_member_report_wizard_form"/>
         <field name="context">{}</field>

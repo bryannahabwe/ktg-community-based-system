@@ -50,22 +50,22 @@
                   sequence="2"/>
 
         <!-- KTG Reports Menu -->
-<!--        <menuitem id="menu_ktg_reports"-->
-<!--                  name="Reports"-->
-<!--                  parent="menu_ktg_root"-->
-<!--                  action="act_open_ktg_member_view"-->
-<!--                  sequence="5"/>-->
+        <menuitem id="menu_ktg_reports"
+                  name="Reports"
+                  parent="menu_ktg_root"
+                  action="act_open_ktg_member_view"
+                  sequence="5"/>
 
-<!--        <menuitem id="menu_ktg_dashboard_report"-->
-<!--                  name="KTG Dashboard"-->
-<!--                  parent="menu_ktg_reports"-->
-<!--                  sequence="1"-->
-<!--                  action="ktg_member_report_wizard_act" />-->
+        <menuitem id="menu_ktg_dashboard_report"
+                  name="KTG Dashboard"
+                  parent="menu_ktg_reports"
+                  sequence="1"
+                  action="ktg_member_report_wizard_act"/>
 
-<!--        <menuitem id="menu_ktg_member_report"-->
-<!--                  name="KTG Member Report"-->
-<!--                  parent="menu_ktg_reports"-->
-<!--                  sequence="2"-->
-<!--                  action="ktg_member_report_wizard_act" />-->
+        <menuitem id="menu_ktg_member_report"
+                  name="KTG Member Report"
+                  parent="menu_ktg_reports"
+                  sequence="2"
+                  action="ktg_member_report_wizard_act"/>
     </data>
 </odoo>

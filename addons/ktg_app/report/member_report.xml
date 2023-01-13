@@ -1,32 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
-        <template id="member_report">
-            <t t-call="web.html_container">
-                <t t-name="web.external_layout">
-                     <div class="header o_background_header" style=" border-bottom: 4px solid #000;">
-                            <div class="row">
-                                <div class="col-10">
-                                    <img t-att-src="'/ktg_app/static/description/icon.png'"
-                                         height="70px"
-                                         style="display: block; margin-left: 30%; padding: auto; max-width: 500px !important;"
-                                         alt="Logo"/>
-                                    <div style="margin-top:5px;">
-                                        <p class="text-center"
-                                           style="font-size: 16px; margin-left: 20%; margin-bottom:0px; padding:0px; font-style: italic;">
-                                            Kebisoni Tumanyane Group
-                                        </p>
-                                        <p class="text-center"
-                                           style="font-size: 22px; margin-left: 20%; margin-top: 5px; font-family: 'DM Sans', sans-serif !important;">
-                                            <strong>Member Report</strong>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="page_border"/>
-                        </div>
-                </t>
+    <template id="member_report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <div style="padding-bottom:50px !important;" class="oe_structure"/>
+                    <h2 align="center">KTG Member Dashboard</h2>
+                    <table class="table table-condensed">
+                        <tbody>
+                            <tr t-if="identification">
+                                <th>Member Name</th>
+                                <td colspan="2">
+                                    <span t-esc="identification['name']"/>
+                                </td>
+                                <th/>
+                                <td/>
+                                <th>KTG Number</th>
+                                <td>
+                                    <span t-esc="identification['ktg_number']"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div t-if="subscriptions">
+                        <table class="table table-condensed">
+                            <tbody>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Amount</th>
+                                </tr>
+                                <tr t-foreach="subscriptions" t-as="t">
+                                    <td>
+                                        <span t-esc="t['year']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="t['subscription']"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div t-if="drives">
+                        <table class="table table-condensed">
+                            <tbody>
+                                <tr>
+                                    <th>Drive</th>
+                                    <th>Amount</th>
+                                </tr>
+                                <tr t-foreach="drives" t-as="d">
+                                    <td>
+                                        <span t-esc="d['drive']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="d['amount']"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </t>
-        </template>
-    </data>
+        </t>
+    </template>
 </odoo>
