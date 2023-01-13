@@ -11,6 +11,7 @@ class KtgAnnualSubscription(models.Model):
     subscription = fields.Monetary('Subscription', required=True, readonly=True, default=20000)
     financial_year = fields.Many2one('ktg.financial_year', 'Financial Year', required=True)
     date_created = fields.Datetime('Date Created', readonly=True, default=fields.Datetime.now)
+    date_of_payment = fields.Date('Date of Payment',)
     currency_id = fields.Many2one('res.currency', string='Currency',
                                   default=lambda self: self.env.user.company_id.currency_id)
 
